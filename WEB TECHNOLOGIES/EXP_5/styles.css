@@ -1,0 +1,9 @@
+
+.colorChangeButton {
+    background-color: blue;
+    color: white;
+}
+
+.colorChangeButton:hover {
+    background-color: rgb(142, 1, 242);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Canvas</title>
+        <style>
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">Canvas</h1>
+        <div>
+        <canvas id="myCanvas1" width="200" height="200" style="border: 2px solid black;"></canvas>
+        <canvas id="myCanvas2" width="200" height="200" style="border: 2px solid black;"></canvas>
+        <canvas id="myCanvas3" width="200" height="200" style="border: 2px solid black;"></canvas>
+        </div>
+    <script>
+        var line = document.getElementById("myCanvas1");
+        var cir = document.getElementById("myCanvas2");
+        var c = document.getElementById("myCanvas3");
+        var ctx = c.getContext("2d");
+
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 200, 200);
+
+        line = line.getContext("2d");
+        cir = cir.getContext("2d");
+
+        line.moveTo(0, 0);
+        line.lineTo(200, 200);
+        line.stroke();
+
+        cir.beginPath();
+        cir.arc(100, 100, 60, 0, 2 * Math.PI);
+        cir.stroke();
+
+    </script>
+    </body>
+    </html>

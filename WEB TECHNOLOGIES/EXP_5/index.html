@@ -1,0 +1,43 @@
+<!-- /Design a HTML web page with at least two <h1>, two images, two buttons, and appropriate 
+    CSS to display,
+    All<h1>withfont-size12pt, and bold in Verdana font using In line CSS.
+    All<img>withbordercoloryellow,thickness10pxusingDocumentLevelCSS.
+    All<inputtype=’button’>shouldchangebackgroundcolortoredonmouseoverthemusing External 
+    CSS*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Web Page</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        div{
+            text-align: center;
+            
+        }
+        img {
+            border: 10px solid yellow;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div>
+        <h1 style="font-size: 12pt; font-weight: bold; font-family: Verdana;">Nechuko</h1>
+
+        <img src="image1.jpg" height="200px" width="350px" alt="Image 1"><br>
+
+        <input type="button" value="Button 1" class="colorChangeButton"><br><br><br>
+
+        <h1 style="font-size: 12pt; font-weight: bold; font-family: Verdana;">Zenitsu Agatsuma</h1>
+
+        <img src="image2.jpg" height="200px" width="350px" alt="Image 2"><br>
+
+        <input type="button" value="Button 2" class="colorChangeButton">
+    </div>
+</body>
+</html>

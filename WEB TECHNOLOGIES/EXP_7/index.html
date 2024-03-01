@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Color Palette</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+            text-align: center;
+        }
+
+        .color-container {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 80px;
+            height: 60px;
+            margin: 9px;
+            cursor: pointer;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        .color-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000;
+            font-size: 12px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Move your mouse over the color boxes to change the background color!</h2>
+
+    <div class="color-container">
+
+        <div class="color-box box1" onmouseover="changeBackgroundColor('red')" onmouseout="changeBackgroundColor('white')" title="Red"> 
+            <h4>RED</h4> 
+        </div>
+
+        <div class="color-box box2" onmouseover="changeBackgroundColor('blue')" onmouseout="changeBackgroundColor('white')" title="Blue"> 
+            <h4>BLUE</h4>
+        </div>
+
+        <div class="color-box box3" onmouseover="changeBackgroundColor('green')" onmouseout="changeBackgroundColor('white')" title="Green"> 
+            <h4>GREEN</h4>
+        </div>
+            
+        <div class="color-box box4" onmouseover="changeBackgroundColor('yellow')" onmouseout="changeBackgroundColor('white')" title="Yellow">
+            <h4>YELLOW</h4>
+        </div>
+            
+        <div class="color-box box5" onmouseover="changeBackgroundColor('purple')" onmouseout="changeBackgroundColor('white')" title="Purple">
+            <h4>PURPLE</h4>
+        </div>
+    </div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+</html>
